@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed & Accuracy Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="text-center mb-4">⌨️ SpeedType: Typing Speed & Accuracy Tracker</h1>
+
+    <!-- Custom Input -->
+    <div class="mb-3">
+      <label for="customText" class="form-label">📝 Enter your custom text (optional):</label>
+      <textarea class="form-control" id="customText" rows="3" placeholder="Paste or type your custom paragraph..."></textarea>
+      <button id="useCustomBtn" class="btn btn-primary mt-2">✅ Use My Text</button>
+    </div>
+
+    <!-- Reference Text -->
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">📘 Reference Text</h5>
+        <p id="referenceText" class="card-text text-muted"></p>
+      </div>
+    </div>
+
+    <!-- Typing Area -->
+    <div class="mb-3">
+      <label for="typingArea" class="form-label">⌨️ Start Typing Below</label>
+      <textarea class="form-control" id="typingArea" rows="4" placeholder="Start typing here..."></textarea>
+    </div>
+
+    <!-- Timer and Restart -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <span id="timer" class="fs-5">⏱ 0.00s</span>
+      <button class="btn btn-warning" onclick="startTest()">🔁 Restart Test</button>
+    </div>
+
+    <!-- Metrics Display -->
+    <div id="metrics" class="card" style="display: none;">
+      <div class="card-body">
+        <h5 class="card-title">📊 Typing Metrics</h5>
+        <p><strong>WPM:</strong> <span id="wpm"></span></p>
+        <p><strong>Accuracy:</strong> <span id="accuracy"></span></p>
+        <p><strong>Error Count:</strong> <span id="errors"></span></p>
+        <p><strong>Error Rate:</strong> <span id="errorRate"></span></p>
+        <p><strong>Total Characters Typed:</strong> <span id="totalChars"></span></p>
+        <p><strong>Correct vs Incorrect Characters:</strong> <span id="charBreakdown"></span></p>
+        <p><strong>Total Time Spent:</strong> <span id="totalTime"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
